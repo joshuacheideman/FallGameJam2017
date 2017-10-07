@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 65429148362948228}
   - component: {fileID: 23428243495605076}
   - component: {fileID: 54935733950330612}
-  - component: {fileID: 65788807711537192}
   - component: {fileID: 114842105832030920}
   m_Layer: 8
   m_Name: GrowPickup
@@ -100,18 +99,6 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &65429148362948228
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1935339270978288}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65788807711537192
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
