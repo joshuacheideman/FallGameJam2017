@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour {
 	float slowdown = 0.1f;
 	float x_velocity;
 	float z_velocity;
-	bool isGrounded=false;
+	bool isGrounded;
     Vector3 offset;
 	GameObject CurrentCam;
 	HopBall hop;
@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
 		offset = CurrentCam.transform.position - this.transform.position;
 		BallMesh = this.gameObject.GetComponent<MeshRenderer> ();
 		hop = GetComponent<HopBall> ();
+		isGrounded = false;
 	}
 	
 	// Update is called once per frame
@@ -49,15 +50,15 @@ public class PlayerMovement : MonoBehaviour {
 		if (isHorizontal) {
 			
 			if(axis_velocity >=0 &&rb_velocity_axis>0)
-				rb.velocity = new Vector3 (axis_velocity, 0.0f, rb.velocity.z);
+				rb.velocity = new Vector3 (axis_velocity, rb.velocity.y, rb.velocity.z);
 			else if(axis_velocity>=0 && rb_velocity_axis<0)
-				rb.velocity = new Vector3 (-axis_velocity, 0.0f, rb.velocity.z);
+				rb.velocity = new Vector3 (-axis_velocity, rb.velocity.y, rb.velocity.z);
 		}
 		else {
 			if (axis_velocity >= 0 && rb_velocity_axis > 0)
-				rb.velocity = new Vector3 (rb.velocity.x, 0.0f, axis_velocity);
+				rb.velocity = new Vector3 (rb.velocity.x, rb.velocity.y, axis_velocity);
 			else if(axis_velocity>=0 && rb_velocity_axis<0)
-				rb.velocity = new Vector3 (rb.velocity.x, 0.0f, -axis_velocity);
+				rb.velocity = new Vector3 (rb.velocity.x, rb.velocity.y, -axis_velocity);
 		}
 	}
 	void LateUpdate()
@@ -68,6 +69,15 @@ public class PlayerMovement : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.tag == "Floor")
+		{
 			isGrounded = true;
+		}
+	}
+	void OnCollisionExit(Collision col)
+	{
+		if (col.gameObject.tag == "Floor")
+		{
+			isGrounded = false;
+		}
 	}
 }
