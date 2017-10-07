@@ -9,9 +9,6 @@ public class PlayerMovement : MonoBehaviour {
 	float movementVert;
 	float JumpForce;
 	float speed = 5.0f;
-	float slowdown = 0.1f;
-	float x_velocity;
-	float z_velocity;
 	bool isGrounded=false;
     Vector3 offset;
 	GameObject CurrentCam;
@@ -32,32 +29,6 @@ public class PlayerMovement : MonoBehaviour {
 		if (BallMesh.material.color == Color.green) //checks if ball has a green material
 			hop.Hop (isGrounded,rb);
 		rb.AddForce(movementHoriz*speed,0.0f,movementVert*speed);
-		if (movementHoriz == 0) {
-			x_velocity = Mathf.Abs (rb.velocity.x);
-			SlowDown (x_velocity, rb.velocity.x, rb, true);
-		}
-		if (movementVert == 0){
-			z_velocity = Mathf.Abs (rb.velocity.z);
-			SlowDown (z_velocity, rb.velocity.z, rb,false);
-		}
-	}
-	void SlowDown(float axis_velocity,float rb_velocity_axis, Rigidbody rb,bool isHorizontal)
-	{
-		axis_velocity -= slowdown;
-		if (axis_velocity < 0)
-			axis_velocity = 0;
-		if (isHorizontal) {
-			if(axis_velocity >=0 &&rb_velocity_axis>0)
-				rb.velocity = new Vector3 (axis_velocity, 0.0f, rb.velocity.z);
-			else if(axis_velocity >=0 && rb_velocity_axis<0)
-				rb.velocity = new Vector3 (-axis_velocity, 0.0f, rb.velocity.z);
-		}
-		else {
-			if (axis_velocity >= 0 && rb_velocity_axis > 0)
-				rb.velocity = new Vector3 (rb.velocity.x, 0.0f, axis_velocity);
-			else if (axis_velocity >= 0 && rb_velocity_axis < 0)
-				rb.velocity = new Vector3 (rb.velocity.x, 0.0f, -axis_velocity);
-		}
 	}
 	void LateUpdate()
 	{
