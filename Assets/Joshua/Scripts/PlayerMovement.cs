@@ -32,6 +32,10 @@ public class PlayerMovement : MonoBehaviour {
 		movementVert = Input.GetAxis ("Vertical");
 		if (BallMesh.material.color == Color.green) //checks if ball has a green material
 			hop.Hop (isGrounded,rb);
+		if (BallMesh.material.color == Color.blue)
+			speed = 8.0f;
+		else
+			speed = 5.0f;
 		rb.AddForce(movementHoriz*speed,0.0f,movementVert*speed);
 		if (movementHoriz == 0) {
 			x_velocity = Mathf.Abs (rb.velocity.x);
