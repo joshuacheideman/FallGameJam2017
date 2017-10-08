@@ -15,5 +15,8 @@ EditorBuildSettings:
     path: Assets/Davey/Scenes/test2.unity
     guid: 527f7dc432cd842bb9b3c5ba6ab16066
   - enabled: 1
+    path: Assets/Davey/Scenes/Main Menu.unity
+    guid: 3c45fb658a9ba4d52af39a91d29d34ce
+  - enabled: 1
     path: Assets/Davey/Scenes/Level1.unity
     guid: 56e6e068cfa6b435a8f21c28b9dbf524
