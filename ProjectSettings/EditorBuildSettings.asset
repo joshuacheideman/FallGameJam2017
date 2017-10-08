@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Davey/Scenes/Explosion.unity
-    guid: a8e9181a21c414090a9b5dd4b95ff230
   - enabled: 0
     path: Assets/Davey/Scenes/DaveyTest.unity
     guid: 1b6b0f54e9d384bcdb9bc9e2d14e7d18
@@ -24,5 +21,14 @@ EditorBuildSettings:
     path: Assets/__DELETED_GUID_Trash/56e6e068cfa6b435a8f21c28b9dbf524
     guid: 56e6e068cfa6b435a8f21c28b9dbf524
   - enabled: 1
+    path: Assets/_Scenes/ThomasLevel.unity
+    guid: 00c62adf4d8d3c14b82d5624195b6842
+  - enabled: 1
+    path: Assets/Joshua/Level1.unity
+    guid: 1e502d9f9ef3b0f4281613c8a59eb6ed
+  - enabled: 1
     path: Assets/_Scenes/Ending.unity
     guid: c0a31c9de0fd042b3ab5535a06ce6bc5
+  - enabled: 1
+    path: Assets/Davey/Scenes/Explosion.unity
+    guid: a8e9181a21c414090a9b5dd4b95ff230
