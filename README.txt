@@ -13,14 +13,16 @@ Space to Jump if the ball is green
 
 Created by:
 Thomas Tran tsmtran@ucdavis.edu
-Joshua Heideman 
+Joshua Heideman jcheideman@ucdavis.edu
 Davey Jay Belliss dybelliss@ucdavis.edu
 
 Credits:
 https://www.youtube.com/watch?v=3KVEe6UVpYw
 https://www.youtube.com/watch?v=-22tna7KHzI
+http://freemusicarchive.org/music/Dee_Yan-Key/my_christmas_music/05--Dee_Yan-Key-holiday
 PBR Ground materials #1 : Johns Junkyard assets
 Realistic tree pack Vol 1. : PolyFix
 Lobo Loco - Swining Sofas 
 Lobo Loco - Tender Birds Couple
 Marsel Minga- Saturn
+Blender
