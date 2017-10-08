@@ -8,7 +8,6 @@ public class JumpPad : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.tag == "Player") {
-			Debug.Log (col.gameObject.name);
 			PlayerRb = col.gameObject.GetComponent<Rigidbody> ();
 			PlayerRb.AddForce (JumpPadForce,ForceMode.Impulse);
 		}

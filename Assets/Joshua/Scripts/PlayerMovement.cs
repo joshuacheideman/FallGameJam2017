@@ -14,12 +14,12 @@ public class PlayerMovement : MonoBehaviour {
 	float z_velocity;
 	bool isGrounded;
     Vector3 offset;
-	GameObject CurrentCam;
+	public GameObject CurrentCam;
+	CameraManager CamMang;
 	HopBall hop;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
-		CurrentCam = GameObject.FindGameObjectWithTag ("MainCamera");
 		offset = CurrentCam.transform.position - this.transform.position;
 		BallMesh = this.gameObject.GetComponent<MeshRenderer> ();
 		hop = GetComponent<HopBall> ();
