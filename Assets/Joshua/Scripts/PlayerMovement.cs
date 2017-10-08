@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
 	public GameObject CurrentCam;
 	CameraManager CamMang;
 	HopBall hop;
+    public static PowerPickup.Pickup currentPower;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();

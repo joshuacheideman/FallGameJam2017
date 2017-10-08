@@ -11,11 +11,11 @@ public abstract class Scale : MonoBehaviour {
     protected Vector3 startingScale;
     protected Vector3 targetScale;
 
-    public IEnumerator ScaleObject()
+    public IEnumerator ScaleObject(Vector3 start, Vector3 end)
     {
         for (float t = 0; t < 1; t += Time.deltaTime / scaleSize)
         {
-            transform.localScale = Vector3.Lerp(startingScale, targetScale, t);
+            transform.localScale = Vector3.Lerp(start, end, t);
 
             yield return null;
         }

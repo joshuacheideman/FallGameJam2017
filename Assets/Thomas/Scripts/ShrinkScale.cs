@@ -12,6 +12,11 @@ public class ShrinkScale : Scale {
 
     public void Shrink()
     {
-        StartCoroutine(ScaleObject());
+        StartCoroutine(ScaleObject(transform.localScale, targetScale));
+    }
+
+    public void ResetShrink()
+    {
+        StartCoroutine(ScaleObject(transform.localScale, startingScale));
     }
 }
