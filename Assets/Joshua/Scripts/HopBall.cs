@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HopBall : MonoBehaviour {
 
-	float JumpForce = 100.0f;
+	public float JumpForce = 250.0f;
 	public void Hop(bool isGrounded,Rigidbody rb)
 	{
 		if (isGrounded && Input.GetButtonDown ("Jump"))
