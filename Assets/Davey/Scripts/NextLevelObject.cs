@@ -14,6 +14,7 @@ public class NextLevelObject : MonoBehaviour {
 		Debug.Log ("Going to next level");
 		completionSound.Play ();
 		GameObject.FindGameObjectWithTag ("Timer").GetComponent<Timer> ().stopTimer ();
-//		gameManager.GetComponent<GameManager> ().LoadNextScene ();
+		GameObject.FindGameObjectWithTag ("BombTimer").GetComponent<BombTimer> ().enabled = false;
+
 	}
 }
