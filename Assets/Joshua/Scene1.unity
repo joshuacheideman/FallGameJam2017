@@ -794,7 +794,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1425905193}
   m_LocalRotation: {x: 0.49568614, y: 0, z: 0, w: 0.8685018}
-  m_LocalPosition: {x: 0, y: -0.0086, z: 0.0101}
+  m_LocalPosition: {x: 0, y: -0.0104, z: 0.0112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1710225788}
@@ -959,6 +959,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000001, y: 0.019987866, z: 0.013829896}
   m_Center: {x: -0.0000000011920929, y: 0.000006042719, z: -0.0030850444}
+--- !u!114 &1710225790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710225785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce8d4815e4812846888ba2da85d565b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CannonFire: {fileID: 1425905194}
 --- !u!1 &1887805828
 GameObject:
   m_ObjectHideFlags: 0
