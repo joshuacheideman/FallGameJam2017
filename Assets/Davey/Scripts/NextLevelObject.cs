@@ -4,9 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class NextLevelObject : MonoBehaviour {
-
+	private GameObject gameManager;
+	private AudioSource completionSound;
+	private void Start() {
+		completionSound = GetComponent<AudioSource> ();
+		gameManager = GameObject.FindGameObjectWithTag ("GameController");
+	}
 	void OnTriggerEnter(Collider other) {
 		Debug.Log ("Going to next level");
-		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+		completionSound.Play ();
+		GameObject.FindGameObjectWithTag ("Timer").GetComponent<Timer> ().stopTimer ();
+//		gameManager.GetComponent<GameManager> ().LoadNextScene ();
 	}
 }

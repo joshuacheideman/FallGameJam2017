@@ -8,11 +8,14 @@ public class Timer : MonoBehaviour {
 
 	public float timeLeft;
 	private Text timerText;
-	public GameObject explosion;
+	private GameObject gameManager;
+	public float explosionTime;
+	private Coroutine lastRoutine = null;
 	// Use this for initialization
 	void Start () {
 		timerText = GameObject.FindGameObjectWithTag ("Timer").GetComponent<Text>();
-		StartCoroutine (countDown ());
+		gameManager = GameObject.FindGameObjectWithTag ("GameController");
+		lastRoutine = StartCoroutine (countDown ());
 	}
 
 	IEnumerator countDown() {
@@ -21,14 +24,19 @@ public class Timer : MonoBehaviour {
 			yield return new WaitForSeconds (1f);
 			timeLeft -= 1;
 		}
-		beginExplosion ();
+		gameManager.GetComponent<GameManager> ().gameOver ();
+
 	}
 
 	private void setText() {
 		timerText.text = timeLeft + " seconds"; 
 	}
 
-	private void beginExplosion() {
-		SceneManager.LoadScene (0);
+	public void stopTimer() {
+		Debug.Log ("StoppingTimer");
+		StopCoroutine (lastRoutine);
 	}
+
+
+		
 }

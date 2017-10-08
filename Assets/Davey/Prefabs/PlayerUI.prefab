@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 224496170184730330}
   - component: {fileID: 222288408856396754}
   - component: {fileID: 114522291937405970}
-  - component: {fileID: 114554699751937872}
+  - component: {fileID: 114683255271283614}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Timer
@@ -101,18 +101,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Time Left:'
---- !u!114 &114554699751937872
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1497050263815484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4936159c5cf7040b4b3acd82d092ac75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeLeft: 2
 --- !u!114 &114620266939030728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +117,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114683255271283614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1497050263815484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4936159c5cf7040b4b3acd82d092ac75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLeft: 1
+  explosionTime: 0
 --- !u!222 &222288408856396754
 CanvasRenderer:
   m_ObjectHideFlags: 1
