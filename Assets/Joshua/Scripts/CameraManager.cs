@@ -10,7 +10,7 @@ public class CameraManager : MonoBehaviour {
 	PlayerMovement PlayerMove;
 	Rigidbody PlayerRigidbody;
 	// Use this for initialization
-	void Start()
+	void Awake()
 	{
 		numPlayers = OurPlayers.Length;
 		curPlayer = 0;
