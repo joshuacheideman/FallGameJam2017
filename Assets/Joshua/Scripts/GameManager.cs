@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
 
 	public IEnumerator playExplosion() {
 		int oldSceneIndex = SceneManager.GetActiveScene ().buildIndex;
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene (5);
 		float explosionTimeLeft = EXPLOSIONTIME;
 		while (explosionTimeLeft >= 0) {
 			if (Input.GetKey(KeyCode.Escape)) {
