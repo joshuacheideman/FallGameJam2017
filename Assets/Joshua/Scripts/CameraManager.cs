@@ -30,6 +30,8 @@ public class CameraManager : MonoBehaviour {
 				Camera.SetActive (false);
 				curPlayer++;
 				PlayerMove = OurPlayers [curPlayer].Player.GetComponent<PlayerMovement> ();
+				PlayerRigidbody = OurPlayers [curPlayer].Player.GetComponent<Rigidbody> ();
+				PlayerRigidbody.WakeUp ();
 				PlayerMove.enabled = true;
 				Camera = OurPlayers [curPlayer].Camera;
 				Camera.SetActive (true);
@@ -44,6 +46,8 @@ public class CameraManager : MonoBehaviour {
 				Camera.SetActive (false);
 				curPlayer = 0;
 				PlayerMove = OurPlayers [curPlayer].Player.GetComponent<PlayerMovement> ();
+				PlayerRigidbody = OurPlayers [curPlayer].Player.GetComponent<Rigidbody> ();
+				PlayerRigidbody.WakeUp ();
 				PlayerMove.enabled = true;
 				Camera = OurPlayers [curPlayer].Camera;
 				Camera.SetActive (true);
