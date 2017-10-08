@@ -12,6 +12,11 @@ public class GrowScale : Scale {
 
     public void Grow()
     {
-        StartCoroutine(ScaleObject());
+        StartCoroutine(ScaleObject(transform.localScale, targetScale));
+    }
+
+    public void ResetGrow()
+    {
+        StartCoroutine(ScaleObject(transform.localScale, startingScale));
     }
 }
