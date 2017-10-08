@@ -27,14 +27,16 @@ public class PowerPickup : MonoBehaviour {
             switch(pickupType)
             {
                 case Pickup.Grow:
-                    Debug.Log("Grow");
-                    other.GetComponent<Scale>().StartScaling();
+                    other.GetComponent<GrowScale>().Grow();
+                    other.GetComponent<MeshRenderer>().material.color = Color.red;
+
                     break;
                 case Pickup.Hop:
                     Debug.Log("Hop");
                     break;
                 case Pickup.Shrink:
-                    Debug.Log("Shrink");
+                    other.GetComponent<ShrinkScale>().Shrink();
+                    other.GetComponent<MeshRenderer>().material.color = Color.yellow;
                     break;
                 case Pickup.Thrust:
                     Debug.Log("Thrust");
