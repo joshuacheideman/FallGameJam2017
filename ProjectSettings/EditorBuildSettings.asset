@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Explosion.unity
+    path: Assets/Davey/Scenes/Explosion.unity
     guid: a8e9181a21c414090a9b5dd4b95ff230
+  - enabled: 1
+    path: Assets/Davey/Scenes/DaveyTest.unity
+    guid: 1b6b0f54e9d384bcdb9bc9e2d14e7d18
