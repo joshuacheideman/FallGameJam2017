@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		movementHoriz = Input.GetAxis ("Horizontal");
 		movementVert = Input.GetAxis ("Vertical");
 		if (BallMesh.material.color == Color.green) //checks if ball has a green material
