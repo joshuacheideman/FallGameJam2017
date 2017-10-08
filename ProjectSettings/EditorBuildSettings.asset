@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Davey/Scenes/Explosion.unity
     guid: a8e9181a21c414090a9b5dd4b95ff230
-  - enabled: 1
+  - enabled: 0
     path: Assets/Davey/Scenes/DaveyTest.unity
     guid: 1b6b0f54e9d384bcdb9bc9e2d14e7d18
-  - enabled: 1
+  - enabled: 0
     path: Assets/Davey/Scenes/test2.unity
     guid: 527f7dc432cd842bb9b3c5ba6ab16066
+  - enabled: 1
+    path: Assets/Davey/Scenes/Main Menu.unity
+    guid: 3c45fb658a9ba4d52af39a91d29d34ce
+  - enabled: 1
+    path: Assets/Davey/Scenes/Level1.unity
+    guid: 56e6e068cfa6b435a8f21c28b9dbf524
